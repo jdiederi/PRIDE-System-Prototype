@@ -1,0 +1,165 @@
+/* <!--going to try to go for a top down approach from the first webpage (index.html) to design the css page. --> */
+
+/*styles for all files*/
+header {
+	text-align: center;
+	color: black;
+	font-style: bold;
+	font-size: xx-large;
+	font-family: Impact, Charcoal, sans-serif;
+	background-color: E6B10E;
+}
+#logo{
+	border-radius: 8px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 85px;
+	max-width: 100%;
+	height: auto;
+}
+nav{
+	text-align: center;
+	display: inline;
+}
+#topNav{
+	text-align: center;
+}
+#topNavUL{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+#topNavLI{
+	float: left;
+	border-right: 1px solid gray;
+}
+#topNavLI:last-child{
+	border-right: none;
+}
+li a{
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+li a:hover{
+	background-color: black;
+}
+a{
+	padding: 8px;
+}
+table {
+	text-align: center;
+	border: 0.1em solid #000000;
+	background-color: gray;
+	color: E6B10E;
+	font-style: bold;
+}
+tr{
+	border: 0.1em solid #000000
+}
+td{
+	border: 0.1em solid #000000
+}
+th {
+	font-family: Times New Roman;
+	font-size: 20px;
+	font-style: bold;
+}
+body{
+	background-color: white; 
+}
+p {
+	text-align: left;
+	font-family: Arial Bold;
+}
+
+h5{
+	text-align: center
+}
+footer{
+	background-color: E6B10E;
+	font-family: Arial Bold;
+}
+/* end styles for all */
+/*index.html*/
+#welcome{
+	text-align: center;	
+}
+#goal{
+	text-align: center;
+}
+/*end index.html specific styles*/
+/*start reviews.html*/
+#input{
+	text-align: left;
+	margin-left: 15px
+}
+input{
+	text-align: right;
+	margin-left: auto;
+	margin-right: auto;
+}
+.container{
+	width: 100px;
+	clear: both;
+}
+.container input{
+	width: 100%;
+	clear: both;
+}
+/*end reviews.html*/
+
+/*start reviewsPage2.html*/
+#reviewPage2{
+	text-align: center;
+}
+#locationButtons{
+	text-align: center;
+	display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+/*end reviewsPage2.html*/
+
+/*start about.html*/
+
+/*end about.html*/
+
+/*start contact.html*/
+#support{
+	text-align: center;
+	text-decoration: underline;
+}
+#contactInfo{
+	text-align: center;
+	font-family: "Arial Bold";
+}
+.cheader{
+	text-align: center; 
+	text-decoration: underline
+}
+/*end contact.html*/
+
+/*start rules.html*/
+#rulesTextArea{
+	
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	text-align: left-side
+}
+/*end rules.html*/
+
+
+
+
+
+

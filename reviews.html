@@ -1,0 +1,537 @@
+<html>
+	<head> 
+	<title> Reviews page of the PNW pride system</title>
+	<link rel= "stylesheet" href= "styles.css">
+	<img id= "logo" src= "pnwLogo.jpg" alt= "pnw logo" width= "160" height= "80"><br>
+	
+	<script>
+		function sendData(){
+		
+		var professorsNameLOC = document.getElementById("professorsNameBox").value;
+		var courseNumberLOC = document.getElementById("courseNumberBox").value;
+		var studentNameLOC = document.getElementById("studentsNameBox").value;
+		var essayVal = document.getElementById("option1").value;
+		
+		
+	  if(typeof(Storage)!=="undefined")
+	  {
+	    localStorage.professorName= professorsNameLOC;
+	    localStorage.courseNumber = courseNumberLOC;
+	    localStorage.studentName = studentNameLOC;
+		localStorage.chkEssay = essayVal;
+	   
+	  }
+	else
+	  {
+		document.getElementById("review1").innerHTML="Sorry, your browser does not support web storage...";
+	  }
+		}
+	</script>
+	</head>
+	
+	<header>
+	Purdue Univeristy Northwest PRIDE system Reviews Page!
+	</header>
+	<h5> Here you can post data driven views of your professors and review what other students have said</h5>
+	<nav id= "topNav">
+		<ul id= "topNavUL">
+			<li id= "topNavLI"><a href = "index.html">Home </a></li>
+			<li id= "topNavLI"><a href = "about.html">About us </a></li>
+			<li id= "topNavLI"><a href = "rules.html">Rules </a></li>
+			<li id= "topNavLI"><a href = "reviews.html">Reviews </a></li>
+			<li id= "topNavLI"><a href = "viewreviews.html">View Reviews</a></li>
+			<li id= "topNavLI"><a href = "photo.html">Photo Gallery </a></li>
+			<li id= "topNavLI"><a href = "contact.html">Contact us </a></li>
+		</ul>
+	</nav>
+	<body>
+	<div id= "input" class= "container">
+	Professor Name:
+	<input type="text" id ="professorsNameBox"> </br>
+	Course Number:
+	<input type="text" id="courseNumberBox"></br>
+	Your Name: 
+	<input type="text" id="studentsNameBox"></br>
+	</div>
+	<div>
+		<p>
+		Please select the percentage on what your course was graded on:
+		</p>
+	</div>
+	<div>
+		<table>
+			<tr>
+				<td>
+				<th>0-10%</th>
+				<th>11-20%</th>
+				<th>21-30%</th>
+				<th>31-40%</th>
+				<th>41-50%</th>
+				<th>51-60%</th>
+			    <th>61-70%</th>
+				<th>71-80%</th>
+				<th>81-90%</th>
+				<th>91-100%</th>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input id="option1" type="radio" name="option1" value="0-10%">
+				</td>
+				<td>
+					<input id="option1" type="radio" name="option1" value="11-20%">
+				</td>
+				<td>
+					<input id="option1" type="radio" name="option1" value="21-30%">
+				</td>
+				<td>
+					<input id="option1" type="radio" name="option1" value="31-40%">
+				</td>
+				<td>
+					<input id="option1" type="radio" name="option1" value="41-50%">
+				</td>
+				<td>
+					<input id="option1" type="radio" name="option1" value="51-60%">
+				</td>
+				<td>
+					<input id="option1" type="radio" name="option1" value="61-70%">
+				</td>
+				<td>
+					<input id="option1" type="radio" name="option1" value="71-80%">
+				</td>
+				<td>
+					<input id="option1" type="radio" name="option1" value="81-90%">
+				</td>
+				<td>
+					<input id="option1" type="radio" name="option1" value="91-100%">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Exams:
+				</td>
+			 
+				<td>
+					<input type="radio" name="option2" value="0-10%">
+				</td>
+				<td>
+					<input type="radio" name="option2" value="11-20%">
+				</td>
+				<td>
+					<input type="radio" name="option2" value="21-30%">
+				</td>
+				<td>
+					<input type="radio" name="option2" value="31-40%">
+				</td>
+				<td>
+					<input type="radio" name="option2" value="41-50%">
+				</td>
+				<td>
+					<input type="radio" name="option2" value="51-60%">
+				</td>
+				<td>
+					<input type="radio" name="option2" value="61-70%">
+				</td>
+				<td>
+					<input type="radio" name="option2" value="71-80%">
+				</td>
+				<td>
+					<input type="radio" name="option2" value="81-90%">
+				</td>
+				<td>
+					<input type="radio" name="option2" value="91-100%">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Quizzes:
+				</td>
+			 
+				<td>
+					<input type="radio" name="option3" value="0-10%">
+				</td>
+				<td>
+					<input type="radio" name="option3" value="11-20%">
+				</td>
+				<td>
+					<input type="radio" name="option3" value="21-30%">
+				</td>
+				<td>
+					<input type="radio" name="option3" value="31-40%">
+				</td>
+				<td>
+					<input type="radio" name="option3" value="41-50%">
+				</td>
+				<td>
+					<input type="radio" name="option3" value="51-60%">
+				</td>
+				<td>
+					<input type="radio" name="option3" value="61-70%">
+				</td>
+				<td>
+					<input type="radio" name="option3" value="71-80%">
+				</td>
+				<td>
+					<input type="radio" name="option3" value="81-90%">
+				</td>
+				<td>
+					<input type="radio" name="option3" value="91-100%">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Projects:
+				</td>
+			 
+				<td>
+					<input type="radio" name="option4" value="0-10%">
+				</td>
+				<td>
+					<input type="radio" name="option4" value="11-20%">
+				</td>
+				<td>
+					<input type="radio" name="option4" value="21-30%">
+				</td>
+				<td>
+					<input type="radio" name="option4" value="31-40%">
+				</td>
+				<td>
+					<input type="radio" name="option4" value="41-50%">
+				</td>
+				<td>
+					<input type="radio" name="option4" value="51-60%">
+				</td>
+				<td>
+					<input type="radio" name="option4" value="61-70%">
+				</td>
+				<td>
+					<input type="radio" name="option4" value="71-80%">
+				</td>
+				<td>
+					<input type="radio" name="option4" value="81-90%">
+				</td>
+				<td>
+					<input type="radio" name="option4" value="91-100%">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Homework:
+				</td>
+			 
+				<td>
+					<input type="radio" name="option5" value="0-10%">
+				</td>
+				<td>
+					<input type="radio" name="option5" value="11-20%">
+				</td>
+				<td>
+					<input type="radio" name="option5" value="21-30%">
+				</td>
+				<td>
+					<input type="radio" name="option5" value="31-40%">
+				</td>
+				<td>
+					<input type="radio" name="option5" value="41-50%">
+				</td>
+				<td>
+					<input type="radio" name="option5" value="51-60%">
+				</td>
+				<td>
+					<input type="radio" name="option5" value="61-70%">
+				</td>
+				<td>
+					<input type="radio" name="option5" value="71-80%">
+				</td>
+				<td>
+					<input type="radio" name="option5" value="81-90%">
+				</td>
+				<td>
+					<input type="radio" name="option5" value="91-100%">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Attendance:
+				</td>
+			 
+				<td>
+					<input type="radio" name="option6" value="0-10%">
+				</td>
+				<td>
+					<input type="radio" name="option6" value="11-20%">
+				</td>
+				<td>
+					<input type="radio" name="option6" value="21-30%">
+				</td>
+				<td>
+					<input type="radio" name="option6" value="31-40%">
+				</td>
+				<td>
+					<input type="radio" name="option6" value="41-50%">
+				</td>
+				<td>
+					<input type="radio" name="option6" value="51-60%">
+				</td>
+				<td>
+					<input type="radio" name="option6" value="61-70%">
+				</td>
+				<td>
+					<input type="radio" name="option6" value="71-80%">
+				</td>
+				<td>
+					<input type="radio" name="option6" value="81-90%">
+				</td>
+				<td>
+					<input type="radio" name="option6" value="91-100%">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Partcipation:
+				</td>
+				<td>
+					<input type="radio" name="option7" value="0-10%">
+				</td>
+				<td>
+					<input type="radio" name="option7" value="11-20%">
+				</td>
+				<td>
+					<input type="radio" name="option7" value="21-30%">
+				</td>
+				<td>
+					<input type="radio" name="option7" value="31-40%">
+				</td>
+				<td>
+					<input type="radio" name="option7" value="41-50%">
+				</td>
+				<td>
+					<input type="radio" name="option7" value="51-60%">
+				</td>
+				<td>
+					<input type="radio" name="option7" value="61-70%">
+				</td>
+				<td>
+					<input type="radio" name="option7" value="71-80%">
+				</td>
+				<td>
+					<input type="radio" name="option7" value="81-90%">
+				</td>
+				<td>
+					<input type="radio" name="option7" value="91-100%">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Other:
+				</td>
+				<td>
+					<input type="radio" name="option8" value="0-10%">
+				</td>
+				<td>
+					<input type="radio" name="option8" value="11-20%">
+				</td>
+				<td>
+					<input type="radio" name="option8" value="21-30%">
+				</td>
+				<td>
+					<input type="radio" name="option8" value="31-40%">
+				</td>
+				<td>
+					<input type="radio" name="option8" value="41-50%">
+				</td>
+				<td>
+					<input type="radio" name="option8" value="51-60%">
+				</td>
+				<td>
+					<input type="radio" name="option8" value="61-70%">
+				</td>
+				<td>
+					<input type="radio" name="option8" value="71-80%">
+				</td>
+				<td>
+					<input type="radio" name="option8" value="81-90%">
+				</td>
+				<td>
+					<input type="radio" name="option8" value="91-100%">
+				</td>
+			</tr>
+		</table>
+		</div>
+		<div>
+		<p>
+		Please select the percentage of usage of Textbooks Vs. Lecture Notes
+		</p>
+	</div>
+	<div>
+		<table>
+			<tr>
+				<td>
+				<th>0-10%</th>
+				<th>11-20%</th>
+				<th>21-30%</th>
+				<th>31-40%</th>
+				<th>41-50%</th>
+				<th>51-60%</th>
+			    <th>61-70%</th>
+				<th>71-80%</th>
+				<th>81-90%</th>
+				<th>91-100%</th>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					Textbooks:
+				</td>
+				<td>
+					<input type="radio" name="option9" value="0-10%">
+				</td>
+				<td>
+					<input type="radio" name="option9" value="11-20%">
+				</td>
+				<td>
+					<input type="radio" name="option9" value="21-30%">
+				</td>
+				<td>
+					<input type="radio" name="option9" value="31-40%">
+				</td>
+				<td>
+					<input type="radio" name="option9" value="41-50%">
+				</td>
+				<td>
+					<input type="radio" name="option9" value="51-60%">
+				</td>
+				<td>
+					<input type="radio" name="option9" value="61-70%">
+				</td>
+				<td>
+					<input type="radio" name="option9" value="71-80%">
+				</td>
+				<td>
+					<input type="radio" name="option9" value="81-90%">
+				</td>
+				<td>
+					<input type="radio" name="option9" value="91-100%">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Lecture notes:
+				</td>
+				<td>
+					<input type="radio" name="option10" value="0-10%">
+				</td>
+				<td>
+					<input type="radio" name="option10" value="11-20%">
+				</td>
+				<td>
+					<input type="radio" name="option10" value="21-30%">
+				</td>
+				<td>
+					<input type="radio" name="option10" value="31-40%">
+				</td>
+				<td>
+					<input type="radio" name="option10" value="41-50%">
+				</td>
+				<td>
+					<input type="radio" name="option10" value="51-60%">
+				</td>
+				<td>
+					<input type="radio" name="option10" value="61-70%">
+				</td>
+				<td>
+					<input type="radio" name="option10" value="71-80%">
+				</td>
+				<td>
+					<input type="radio" name="option10" value="81-90%">
+				</td>
+				<td>
+					<input type="radio" name="option10" value="91-100%">
+				</td>
+			</tr>
+		</table>
+	</div><br>
+		<a href= "reviewsPage2.html"><input type="button" id="next" value = "Next"></a>
+		<input type="button" id="submit" onclick="sendData()" value= "Submit">
+	</body>
+	
+	<body>
+		<div id= "reviewPage2">
+		What type of homework did the professor assign?</br>
+		Reading: <input type= "checkBox" name= "typeOfHomework" value= "reading"/> </br>
+		Textbook Homework <input type= "checkBox" name= "typeOfHomework" value= "textBookHomework"/></br>
+		Online Homework <input type= "checkBox" name= "typeOfHomework" value= "onlineHomework"/>
+		</div>
+		<div>
+		<!-- <input type= "week" name= "week"> input type for entering dates. Was hoping it would display date picker -->
+		</div>
+		
+		<form id="locationButtons">
+		<table>
+			<tr>
+				<td>
+					On-Campus?
+					<label><input type="radio" name="campusOption" value="Yes" />Yes</label>
+					<label><input type="radio" name="campusOption" value="No" />No</label>
+				</td>
+			</tr>
+			<tr id="onCampusLocations">
+				<td>
+					<p>
+						Hammond Campus
+						<label for= "location"><input type="radio" name="location" value="hammond" /></label>
+					</p>
+					<p>
+						Westville Campus
+						<label for= "location"><input type="radio" name="location" value="westville" /></label>
+					</p>
+					<p>
+						Both
+						<label for= "location"> <input type= "radio" name= "location" value= "both"/></label>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<p>
+				<td>
+					Online?
+					<label><input type= "radio" name= "campusOption" value= "online"/></label>
+				</td>
+				</p>
+			</tr>
+			<tr>
+				<p>
+				<td>
+				Hybrid?
+				<label><input type= "radio" name= "campusOption" value= "hybrid"/></label>
+				</td>
+				</p>
+			</tr>
+		</table>
+		</form>
+		
+		<div id= "reviewsPageTextArea">
+		Please feel free to add any additional comments so long as they adhere to the <a href= "rules.html">rules</a>
+		<textarea name= "comments" rows= "6" cols= "100"></textarea>
+		</div><br>
+		
+		<script type= "text/javascript" src= "script.js">
+		</script>
+		
+		<input type= "submit" value= "Submit" onclick= "sendData()"> 
+	</body>
+	<center>
+	<footer>&#169 2018 Priderating.edu, All Rights Reserved<br>
+	<nav>
+		<a href = "index.html">Home </a> ||
+		<a href = "about.html">About us </a> ||
+		<a href = "rules.html">Rules </a>||
+		<a href = "reviews.html">Reviews </a>||
+		<a href = "viewreviews.html">View Reviews</a>||
+		<a href = "photo.html">Photo Gallery </a>||
+		<a href = "contact.html">Contact us </a>
+	</nav>
+	</footer>
+	</center>
+</html>

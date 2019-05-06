@@ -1,0 +1,72 @@
+<html>
+
+<head>
+	<title> View Your Reviews </title>
+	<link rel="stylesheet" href="styles.css">
+	<script>
+	var br = "<br>";
+		function writeTable(){
+			var table = document.getElementById("reviewTable");
+			var row = table.insertRow(0);
+			var cellx = row.insertCell(0);
+			cellx.innerHTML = "Your Reviews:";
+
+			if(typeof(Storage)!=="undefined")
+			{					
+				var rowR = table.insertRow(1);
+				var cellR = rowR.insertCell(0);
+				//cellR.innerHTML = "Professor Name: " + Review.profName + br + "Course Number: " + Review.courseNum + br + "Student Name: " + Review.studentTitle + br + "Course Difficulty: " + Review.courseDiff + br
+				cellR.innerHTML = "Professor Name: " + localStorage.professorName + br + "Course Number: " + localStorage.courseNumber + br + "Student Name: " + localStorage.studentName + br + 
+					"Essay Percentage: " + localStorage.chkEssay + br;
+			}
+			else
+			{
+			  document.getElementById("review1").innerHTML="Sorry, your browser does not support web storage...";
+			}
+		}
+	</script>
+	
+	<style>
+	</style>
+</head>
+<nav id= "topNav">
+		<ul id= "topNavUL">
+			<li id= "topNavLI"><a href = "index.html">Home </a></li>
+			<li id= "topNavLI"><a href = "about.html">About us </a></li>
+			<li id= "topNavLI"><a href = "rules.html">Rules </a></li>
+			<li id= "topNavLI"><a href = "reviews.html">Reviews </a></li>
+			<li id= "topNavLI"><a href = "viewreviews.html">View Reviews</a></li>
+			<li id= "topNavLI"><a href = "photo.html">Photo Gallery </a></li>
+			<li id= "topNavLI"><a href = "contact.html">Contact us </a></li>
+		</ul>
+	</nav>
+
+<body onload="writeTable()">
+	<header>
+		<h1 style="text-align: center"> P.R.I.D.E. Ratings </h1>
+	</header>
+	
+	<div id="tableArea" style="text-align: center">
+	<center>
+		<table id="reviewTable" style="border: 1px solid black">
+			
+		</table>
+		</center>
+	</div>
+	
+	<a href="reviews.html"><input type="button" value="Post Another Review"></a><br>
+</body>
+<center>
+	<footer>&#169 2018 Priderating.edu, All Rights Reserved<br>
+	<nav>
+		<a href = "index.html">Home </a> ||
+		<a href = "about.html">About us </a> ||
+		<a href = "rules.html">Rules </a>||
+		<a href = "reviews.html">Reviews </a>||
+		<a href = "viewreviews.html">View Reviews</a>||
+		<a href = "photo.html">Photo Gallery </a>||
+		<a href = "contact.html">Contact us </a>
+	</nav>
+	</footer>
+	</center>
+</html>

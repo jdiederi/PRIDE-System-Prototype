@@ -1,0 +1,97 @@
+<html>
+	<head>
+		<title>Reviews Page 2</title>
+		<link rel= "stylesheet" href= "styles.css">
+		<img id= "logo" src= "pnwLogo.jpg" alt= "pnw logo" width= "160" height= "80"><br>
+	</head>
+	<header>Welcome to the PNW Pride Reviews Pages</header><br>
+	<nav id= "topNav">
+		<ul id= "topNavUL">
+			<li id= "topNavLI"><a href = "index.html">Home </a></li>
+			<li id= "topNavLI"><a href = "about.html">About us </a></li>
+			<li id= "topNavLI"><a href = "rules.html">Rules </a></li>
+			<li id= "topNavLI"><a href = "reviews.html">Reviews </a></li>
+			<li id= "topNavLI"><a href = "viewreviews.html">View Reviews</a></li>
+			<li id= "topNavLI"><a href = "photo.html">Photo Gallery </a></li>
+			<li id= "topNavLI"><a href = "contact.html">Contact us </a></li>
+		</ul>
+	</nav>
+	<body onload= "sendData()">
+		<div id= "reviewPage2">
+		What type of homework did the professor assign?</br>
+		Reading: <input type= "checkBox" name= "typeOfHomework" value= "reading"/> </br>
+		Textbook Homework <input type= "checkBox" name= "typeOfHomework" value= "textBookHomework"/></br>
+		Online Homework <input type= "checkBox" name= "typeOfHomework" value= "onlineHomework"/>
+		</div>
+		<div>
+		<!-- <input type= "week" name= "week"> input type for entering dates. Was hoping it would display date picker -->
+		</div>
+		
+		<form id="locationButtons">
+		<table>
+			<tr>
+				<td>
+					On-Campus?
+					<label><input type="radio" name="campusOption" value="Yes" />Yes</label>
+					<label><input type="radio" name="campusOption" value="No" />No</label>
+				</td>
+			</tr>
+			<tr id="onCampusLocations">
+				<td>
+					<p>
+						Hammond Campus
+						<label for= "location"><input type="radio" name="location" value="hammond" /></label>
+					</p>
+					<p>
+						Westville Campus
+						<label for= "location"><input type="radio" name="location" value="westville" /></label>
+					</p>
+					<p>
+						Both
+						<label for= "location"> <input type= "radio" name= "location" value= "both"/></label>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<p>
+				<td>
+					Online?
+					<label><input type= "radio" name= "campusOption" value= "online"/></label>
+				</td>
+				</p>
+			</tr>
+			<tr>
+				<p>
+				<td>
+				Hybrid?
+				<label><input type= "radio" name= "campusOption" value= "hybrid"/></label>
+				</td>
+				</p>
+			</tr>
+		</table>
+		</form>
+		
+		<div id= "reviewsPageTextArea">
+		Please feel free to add any additional comments so long as they adhere to the <a href= "rules.html">rules</a>
+		<textarea name= "comments" rows= "6" cols= "100"></textarea>
+		</div><br>
+		
+		<script type= "text/javascript" src= "script.js">
+		</script>
+		
+		<input type= "submit" value= "Submit" onclick= "sendData()"> 
+	</body>
+	<center>
+	<footer>&#169 2018 Priderating.edu, All Rights Reserved<br>
+	<nav>
+		<a href = "index.html">Home </a> ||
+		<a href = "about.html">About us </a> ||
+		<a href = "rules.html">Rules </a>||
+		<a href = "reviews.html">Reviews </a>||
+		<a href = "viewreviews.html">View Reviews</a>||
+		<a href = "photo.html">Photo Gallery </a>||
+		<a href = "contact.html">Contact us </a>
+	</nav>
+	</footer>
+	</center>
+</html>
